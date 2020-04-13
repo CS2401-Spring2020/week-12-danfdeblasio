@@ -73,4 +73,13 @@ public class myBinarySearchTreeTester {
     }
   }
   
+  @Test
+  void testTotallyUnbalenced2() {
+    myBinarySearchTreeNode root = new myBinarySearchTreeNode(new int[] {10,9,8,7,6,5,4,3,2,1,0});
+    assertEquals(10, root.height());
+    for(int i=0; i<=10; i++) {
+      assertEquals(10-i,root.depth(i));
+    }
+  }
+  
 }
