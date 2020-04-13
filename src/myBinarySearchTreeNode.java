@@ -94,6 +94,14 @@ class myBinarySearchTreeNode{
     return -1;
   }
   
+  public int size(){
+    // This method recursively calculates the number of nodes in the (sub)tree.
+    int count = 1;
+    if(left != null) count += left.size();
+    if(right != null) count += right.size();
+    return count;
+ }
+  
   public void print() { print(""); }
   private void print(String prefix) {
     System.out.println(prefix + myValue);
